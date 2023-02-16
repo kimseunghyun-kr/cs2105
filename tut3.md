@@ -60,6 +60,11 @@ successfully rcv = 4+1 = 5
     
     {Mbps = megabits per second / MBPS = MegaBytes per second}
 
+7.
+    1.
+
+    src = 128.119.245.12
+    gaia = 172.30.1.5
 
 
 

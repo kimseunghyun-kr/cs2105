@@ -30,7 +30,7 @@ serverIP = "172.28.176.63"
 serverPort = 4444
 clientSocket = socket(AF_INET, SOCK_STREAM)
 
-def fileGet:
+def fileGet():
     clientSocket.send(get)
     getResponse = clientSocket.recv(HEADRCV).decode()
     if getResponse == FDATA:
@@ -68,19 +68,19 @@ def pwCrack(pwLeft):
         
 
 
-def md5HashandPut(data){
+def md5HashandPut(data):
     hashedresult = hashlib.md5(data);
     sendput = put + str(32) + hashedresult
     clientSocket.send(sendput);
     response = clientSocket.recv(HEADRCV)
     if response == INVHSH:
         print("wrong hash")
-    else if response == HMATCH:
+    elif response == HMATCH:
         print('correct hash')
     else:
         print('unknown error with response code %d'.format(response))
     
-}            
+            
 
 # create a TCP socket
 # connect to the given Server IP, port number
@@ -91,7 +91,7 @@ student_key = str(argv[1])
 
 # initial handshake is to pass the student_key
 # to which the server response with an ok
-handshakestn = stdId + str(len(student_key)) student_key
+handshakestn = stdId + str(len(student_key)) + student_key
 clientSocket.send(handshakestn);
 handshakeResp = clientSocket.recv(HEADRCV)
 
