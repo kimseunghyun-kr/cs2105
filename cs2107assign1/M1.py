@@ -66,7 +66,7 @@ for i, (c, _) in enumerate(sortedCounts):
     mapping[c] = letter_frequencies[i][0]
 
 # current mapping
-# k e
+
 # d t
 # p a
 # b o -> i
@@ -93,25 +93,41 @@ for i, (c, _) in enumerate(sortedCounts):
 # q q -> p -> g -> w
 
 # manual mapping
+mapping['a'] = 'y'
+mapping['b'] = 'i'
+mapping['c'] = 'o' 
+# d t
+# e v
+mapping['f'] = 'q'
+# g n
 mapping['h'] = 'k'
+mapping['i'] = 'g'
+mapping['j'] = 'h'
+# k e
+mapping['l'] = 'b'
+mapping['m'] = 'c'
+mapping['n'] = 'f'
+mapping['o'] = 'd'
+# p a
+mapping['q'] = 'z'
+mapping['r'] = 's'
 mapping['s'] = 'w'
 mapping['t'] = 'p'
-mapping['n'] = 'f'
-mapping['y'] = 'm'
-mapping['q'] = 'z'
-mapping['b'] = 'i'
-mapping['r'] = 's'
-mapping['c'] = 'o' 
-mapping['j'] = 'h'
-mapping['x'] = 'r'
-mapping['l'] = 'b'
-mapping['f'] = 'q'
+# u b
 mapping['v'] = 'l'
-mapping['m'] = 'c'
+# w x
+mapping['x'] = 'r'
+mapping['y'] = 'm'
 mapping['z'] = 'u'
-mapping['o'] = 'd'
-mapping['a'] = 'y'
-mapping['i'] = 'g'
+
+
+
+
+
+
+
+
+
 newStr = ""
 for i in range(len(text)):
     char = text[i];

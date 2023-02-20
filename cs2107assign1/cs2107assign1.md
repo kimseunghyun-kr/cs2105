@@ -39,6 +39,7 @@ mapping['x'] = 'r'
 mapping['y'] = 'm'
 mapping['z'] = 'u'
 
+<<<<<<< Updated upstream
 M.2
 CS2107{D0n7-us3-eCB-pls!}
 brute force height to find out what is the height ~904 but lower still can find for some reason although image is truncated,
@@ -50,3 +51,11 @@ M.3
 https://github.com/skysider/crc32hack
 credits to the above dude to help undo the checksum and doesnt need me to do the brute force on all possible 2^32 bytes
 
+=======
+
+M.2
+
+CS2107{D0n7_uS3_eCB_pls!}
+
+
+>>>>>>> Stashed changes
