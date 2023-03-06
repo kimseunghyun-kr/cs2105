@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 import os
 from PIL import Image as im
 
@@ -38,15 +37,3 @@ while(True):
     
 
 print(h)
-=======
-# from Crypto.Cipher import AES
-import os
-from PIL import Image
-
-with open('./cs2107assign1/body.ppm.ecb', 'rb') as f:
-    data = f.read()
-
-print(data.decode())
-
-# 
->>>>>>> Stashed changes

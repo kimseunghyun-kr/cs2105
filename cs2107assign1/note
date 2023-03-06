@@ -1,0 +1,9 @@
+c0 = seed xor p0
+c1 = seed xor p1
+
+c0 xor c1 = seed xor seed XOR P1 XOR p0
+
+    P1 XOR p0
+    P2 XOR p0
+    P1 XOR P2
+    
