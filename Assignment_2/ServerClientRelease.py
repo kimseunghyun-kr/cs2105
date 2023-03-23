@@ -3,6 +3,7 @@ import sys
 import time
 from _socket import SHUT_RDWR
 from socket import socket, AF_INET, SOCK_STREAM
+import zlib
 
 from IceHelperRelease import IceHelper
 
@@ -163,9 +164,9 @@ class ServerClient:
                 packet = self.get_one_packet();
                 if(len(packet) == 0 ):
                     break;
-                pktChkSum = packet[:CHKSUM].decode();
+                pktChkSum = packet[:CHKSUM]
                 remainder = packet[CHKSUM:]
-                calculatedChckSum = self.checkSum(remainder);
+                calculatedChckSum = zlib.crc32(remainder).to_bytes(CHKSUM, 'big');
                 
                 if(pktChkSum != calculatedChckSum):
                     self.clientSocket.sendall(NAK);
@@ -222,7 +223,7 @@ class ServerClient:
                 
                 data = currSEQ + dataLen + data;
                 
-                currCheckSum = self.checkSum(data)
+                currCheckSum = zlib.crc32(data).to_bytes(CHKSUM, 'big');
                 if(len(currCheckSum)<CHKSUM):
                     currCheckSum = b'0' * (CHKSUM - len(currCheckSum)) + currCheckSum
                 
